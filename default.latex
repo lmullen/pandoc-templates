@@ -152,6 +152,9 @@ $if(date)$
 \date{$date$}
 $endif$
 
+%palatino typeface
+\usepackage{mathpazo}
+
 \begin{document}
 $if(title)$
 \maketitle
