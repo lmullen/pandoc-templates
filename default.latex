@@ -152,8 +152,13 @@ $if(date)$
 \date{$date$}
 $endif$
 
-%palatino typeface
-\usepackage{mathpazo}
+%customizations
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[protrusion=true,
+			expansion=true
+		]{microtype}
+\usepackage[osf]{mathpazo}
 
 \begin{document}
 $if(title)$
