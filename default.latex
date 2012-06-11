@@ -134,12 +134,9 @@ $endif$
 \date{$date$}
 
 %customizations
-\usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[protrusion=true,
-			expansion=true
-		]{microtype}
 \usepackage[osf]{mathpazo}
+%end customizations
 
 \begin{document}
 $if(title)$
