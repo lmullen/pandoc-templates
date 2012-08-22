@@ -1,6 +1,7 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$]{$documentclass$}
+%\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$]{$documentclass$}
+\documentclass[$if(lang)$$lang$,$endif$11pt]{$documentclass$}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -94,7 +95,7 @@ $endif$
             pdftitle={$title-meta$},
             colorlinks=true,
             urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$black$endif$,
             pdfborder={0 0 0}}
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
