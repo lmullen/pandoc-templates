@@ -50,13 +50,13 @@
   \setaftersecskip{1.7ex}
 
   % Title flush left
-  \pretitle{\begin{flushleft}\scriptsize\textsc{\MakeLowercase{\mycoursenumber} 
+  \pretitle{\begin{flushleft}\footnotesize\textsc{\MakeLowercase{\mycoursenumber} 
     \quad \ding{167} \quad \MakeLowercase{\myuniversity} \quad 
 \ding{167} \quad \MakeLowercase{\mysemester}}\\\LARGE}
-\posttitle{\\[.25em] \scriptsize Meets in \myclassroom\ on 
+\posttitle{\\[.25em] \footnotesize Meets in \myclassroom\ on 
 \mytimes\\Course website: \href{\mycourseweb}{\mycourseweb} \end{flushleft}\par\vskip 0.5em}
   \preauthor{\begin{flushleft}\itshape  \Large \vspace{0.5em}}
-    \postauthor{\normalfont\\[.25em]\scriptsize
+    \postauthor{\normalfont\\[.25em]\footnotesize
       \href{mailto:\myemail}{\myemail}\quad\Squaredot\quad\href{\myweb}{\myweb}\\
       Office: \myoffice\quad\Squaredot\quad Mailbox: \mymailbox\\
       Office hours: \myhours \end{flushleft}}
@@ -67,8 +67,8 @@
 
 % include version control information on first page
 \makepagestyle{vcsyllabus}
-\makeevenfoot{plain}{}{}{\scriptsize Revision \texttt{\GITAbrHash} on \texttt{\VCDateTEX}}
-\makeoddfoot{plain}{}{}{\scriptsize Revision \texttt{\GITAbrHash} on \texttt{\VCDateTEX}}
+\makeevenfoot{plain}{}{}{\footnotesize Revision \texttt{\GITAbrHash} on \texttt{\VCDateTEX}}
+\makeoddfoot{plain}{}{}{\footnotesize Revision \texttt{\GITAbrHash} on \texttt{\VCDateTEX}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}
