@@ -164,7 +164,7 @@ $endif$
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
             colorlinks=true,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$BrickRed$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$black$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$black$endif$,
             pdfborder={0 0 0}}
 $if(links-as-notes)$
