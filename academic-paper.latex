@@ -1,0 +1,114 @@
+% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This document by
+%	Lincoln Mullen 
+%	lincoln@lincolnmullen.com
+%	http://lincolnmullen.com
+% (c) Copyright 2012 Lincoln Mullen. All Rights Reserved. 
+
+\documentclass[$fontsize$, minion]{$documentclass$}
+% You can use standard article.cls options here
+% You can choose between caslon and minion for the font
+
+% Document metadata
+\def\myauthor{$author$}
+\def\mytitle{$title$}
+\def\mydate{$date$}
+\def\mycopyright{\myauthor}
+\def\mylicenses{}
+\def\mykeywords{$keywords$}
+\def\myaffiliation{Brandeis University}
+\def\mydepartment{Department of History}
+\def\mycorrespondence{Department of History MS 036,
+					  Brandeis University,
+					  Waltham, MA 02453}
+\def\myemail{$email$}
+\def\myweb{http://lincolnmullen.com}
+%\def\myphone{}
+%\def\myversion{}
+%\def\myrevision{}
+%\def\mybibliostyle{plain}
+%\def\mybibliocommand{}
+%\def\mysubtitle{}
+
+% Use the metadata in the document title, etc.
+\title{\mytitle}
+\date{\MakeLowercase{\mydate}}
+\author{\MakeLowercase{\myauthor}\thanks{
+	\mydepartment, \myaffiliation; \mbox{e-mail}: \href{mailto:\myemail}{\myemail}. Revision: \textsf{\VCRevision} on \textsf{\VCDateTEX}.}}
+
+% better colors for hyperref
+\usepackage[usenames, dvipsnames]{xcolor}
+
+% allows urls in PDFs, among other things. 
+\usepackage[xetex,					% produce commands for xetex
+			hypertexnames,			% use guessable names for links
+			breaklinks=true,		% allows link text to break across lines
+			bookmarks,				% generate bookmarks in PDF files
+			bookmarksnumbered,
+			plainpages=false,
+			colorlinks=true,		% color the links but set colors
+			linkcolor=black,
+			citecolor=black,
+			filecolor=black,
+			urlcolor=BrickRed,
+			pdfauthor={\myauthor},	% pass metadata into the PDF file
+			pdftitle={\mytitle},
+			pdfkeywords={\mykeywords},
+			pdfcreator={XeLaTeX}
+		]{hyperref}
+
+% Format URLs properly
+\usepackage{url}
+
+% Use babel (not polyglossia?) to define language
+\usepackage[english,
+			american
+			]{babel}
+
+% Set quotation styles
+\usepackage[autostyle=true,		%adapt quotation rules to the language
+			english=american,	%define basic quotation rules
+			]{csquotes}
+
+% use BibLaTeX with Chicago style
+\usepackage[notes,				%use footnotes rather than author-date
+			backend=biber,		%use biber to format citations
+			autocite=footnote,	%turn autocites into footnotes
+			isbn=false,			%don't print ISBNs
+			doi=true,			%print DOIs
+			url=false,			%don't print URLs
+			noibid,				%ibid belongs in the nineteenth century,
+			]{biblatex-chicago}
+
+% Define which BibTeX database to use
+\bibliography{dissertation.bib}
+
+% A better way to change case. Needed for the small caps titles.
+\usepackage[overload]{textcase}
+
+% Single horizontal space after punctuation
+\frenchspacing
+
+%use the vc bundle to list current Git commit
+%\immediate\write18{sh ./vc}
+\input{vc}
+
+% Load graphix if you need embedded graphics
+%\usepackage{graphix}
+
+% Load fancyhdr if you need to change the headers
+%\usepackage{fancyhdr}
+
+% Permit inverse searching from PDF
+%\usepackage{pdfsync}
+
+% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Begin the document and make the title
+\begin{document}
+\maketitle
+
+$body$
+
+% END BODY TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
