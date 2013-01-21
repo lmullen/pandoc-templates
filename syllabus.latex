@@ -145,8 +145,7 @@ $if(fancy-enums)$
 \usepackage{enumerate}
 $endif$
 $if(tables)$
-\usepackage{ctable}
-\usepackage{float} % provides the H option for float placement
+\usepackage{longtable}
 $endif$
 $if(graphics)$
 \usepackage{graphicx}
