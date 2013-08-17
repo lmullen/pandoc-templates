@@ -31,7 +31,7 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
-  <script src="$slidy-url$/scripts/slidy.js.gz"
+  <script src="$slidy-url$/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 $if(duration)$
   <meta name="duration" content="$duration$" />
@@ -44,6 +44,9 @@ $endfor$
 $if(title)$
 <div class="slide titlepage">
   <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <h1 class="subtitle">$subtitle$</h1>
+$endif$
   <p class="author">
 $for(author)$$author$$sep$<br/>$endfor$
   </p>

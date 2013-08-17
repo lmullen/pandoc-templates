@@ -120,8 +120,11 @@ $endfor$
 </head>
 <body>
 $if(title)$
-<section>
+<section class="title">
   <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <h1 class="subtitle">$subtitle$</h1>
+$endif$
 $for(author)$
   <p class="author">$author$</p>
 $endfor$
