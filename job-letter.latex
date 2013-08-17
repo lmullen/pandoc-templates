@@ -128,8 +128,8 @@ $endfor$
 \usepackage{textcomp}
 \usepackage[osf]{mathpazo}
 \signature{Lincoln Mullen}
-\usepackage[margin=1in]{geometry}
-\setlength{\parindent}{22pt}
+\usepackage[margin=1.0in]{geometry}
+\setlength{\parindent}{24pt}
 \setlength{\parskip}{0pt}
 %\address{}
 %end customizations
