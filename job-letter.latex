@@ -125,21 +125,39 @@ $header-includes$
 $endfor$
 
 %customizations
+% \usepackage[colorlinks, breaklinks]{hyperref}  
+\usepackage{graphicx}
+\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} 
 \usepackage{textcomp}
 \usepackage[osf]{mathpazo}
-\signature{Lincoln Mullen}
-\usepackage[margin=1.0in]{geometry}
-\setlength{\parindent}{24pt}
-\setlength{\parskip}{0pt}
+\urlstyle{same}
+% \signature{Lincoln A. Mullen\\PhD Candidate, Brandeis University}
+\usepackage[margin=.97in]{geometry}
+% \setlength{\parindent}{24pt}
+% \setlength{\parskip}{0pt}
+\frenchspacing
 %\address{}
-%end customizations
+% \usepackage{setspace}
+% \doublespacing
+\addtolength{\medskipamount}{-0.5\medskipamount}
+
+\makeatletter
+\renewcommand*{\opening}[1]{
+  \thispagestyle{firstpage}%
+  {\raggedright \toname \\ \toaddress \par}%
+  {\raggedleft\@date\par}%
+  \vspace{0\parskip}%
+#1\par\nobreak}
+\makeatother
+% end customizations
+
 
 \begin{document}
 
 \begin{letter}{$author$}
 $if(title)$
 \opening{\noindent $title$}
-\vspace{11pt}
+% \vspace{11pt}
 $endif$
 $for(include-before)$
 $include-before$
@@ -176,6 +194,9 @@ $include-after$
 
 $endfor$
 \vspace{11pt}
-\closing{Yours,}
+\closing{Sincerely,\\
+\fromsig{\includegraphics[scale=0.35]{signature.png}} \\
+\fromname{Lincoln A. Mullen\\PhD Candidate, Brandeis University}
+}
 \end{letter}
 \end{document}
