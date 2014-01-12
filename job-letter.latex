@@ -193,10 +193,11 @@ $for(include-after)$
 $include-after$
 
 $endfor$
-\vspace{11pt}
+\vspace{0pt}
 \closing{Sincerely,\\
-\fromsig{\includegraphics[scale=0.35]{signature.png}} \\
+\fromsig{\includegraphics[scale=0.25]{signature.png}} \\
 \fromname{Lincoln A. Mullen\\PhD Candidate, Brandeis University}
+\vspace{-12pt}
 }
 \end{letter}
 \end{document}

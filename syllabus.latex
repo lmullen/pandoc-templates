@@ -18,7 +18,7 @@
 \def\mydate{}
 \def\mycoursenumber{$coursenumber$}
 \def\myoffice{$office$}
-\def\myhours{$hours$}
+\def\myhours{$officehours$}
 \def\mymailbox{$mailbox$}
 
 
@@ -55,7 +55,7 @@
   \posttitle{\end{flushleft}}
   $else$
   \pretitle{\begin{flushleft}\footnotesize\textsc{\MakeLowercase{\mycoursenumber} \quad \ding{167} \quad \MakeLowercase{\myuniversity} \quad \ding{167} \quad \MakeLowercase{\mysemester}}\\\LARGE}
-  \posttitle{\\[.25em] \footnotesize Meets in \myclassroom\ on \mytimes\\Course website: \href{\mycourseweb}{\mycourseweb} \end{flushleft}\par\vskip 0.5em} 
+  \posttitle{\\[.25em] \footnotesize Meets in \myclassroom\ on \mytimes \end{flushleft}\par\vskip 0.5em} 
   $endif$
   \preauthor{\begin{flushleft}\itshape  \Large \vspace{0.5em}}
     \postauthor{\normalfont\\[.25em]\footnotesize
@@ -64,8 +64,9 @@
   $else$
   \preauthor{\begin{flushleft}\itshape  \Large \vspace{0.5em}}
     \postauthor{\normalfont\\[.25em]\footnotesize
-      \href{mailto:\myemail}{\myemail}\quad\Squaredot\quad\href{\myweb}{\myweb}\\
-      Office: \myoffice\quad\Squaredot\quad Mailbox: \mymailbox\\
+      E-mail: \href{mailto:\myemail}{\myemail}\\
+      Website: \href{\myweb}{\myweb}\\
+      Office: \myoffice\\
       Office hours: \myhours \end{flushleft}}
   $endif$
   \predate{}

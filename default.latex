@@ -40,12 +40,12 @@ $if(geometry)$
 $endif$
 $if(natbib)$
 \usepackage{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+% \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
 \usepackage{biblatex}
 $if(biblio-files)$
-\bibliography{$biblio-files$}
+% \bibliography{$biblio-files$}
 $endif$
 $endif$
 $if(listings)$
@@ -179,12 +179,12 @@ $else$
 \renewcommand\refname{$biblio-title$}
 $endif$
 $endif$
-\bibliography{$biblio-files$}
+% \bibliography{$biblio-files$}
 
 $endif$
 $endif$
 $if(biblatex)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+% \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 $endif$
 $for(include-after)$
