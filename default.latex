@@ -1,4 +1,4 @@
-\documentclass[11pt$if(lang)$,$lang$$endif$$if(papersize)$,$papersize$,$endif$$for(classoption)$,$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$$if(lang)$,$lang$$endif$$if(papersize)$,$papersize$,$endif$$for(classoption)$,$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -61,6 +61,7 @@ $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
 $if(tables)$
+\usepackage{booktabs}
 \usepackage{longtable}
 $endif$
 $if(graphics)$
