@@ -1,9 +1,11 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$else$17pt,$endif$$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 $if(theme)$
 \usetheme{$theme$}
 $endif$
 $if(colortheme)$
 \usecolortheme{$colortheme$}
+$else$
+\usecolortheme{dove}
 $endif$
 $if(fonttheme)$
 \usefonttheme{$fonttheme$}
