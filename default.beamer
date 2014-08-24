@@ -40,7 +40,7 @@ $endif$
           \scriptsize\insertframenumber}}}\hspace*{5pt}}
 
 % Space between paragraphs on notes page
-\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+\addtobeamertemplate{note page}{\setlength{\parskip}{6pt}}
 
 % Color and shape of bullets
 % \setbeamercolor{item}{fg=gray} 
@@ -51,6 +51,13 @@ $endif$
 \setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
 \setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
 
+% Title page options
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{institute}{size=\footnotesize}
+\setbeamerfont{date}{size=\tiny}
+
+\usepackage{hyperref}
+\usepackage{pgfpages}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -173,8 +180,6 @@ $endif$
 
 \begin{document}
 $if(title)$
-{
-\setbeamertemplate{footline}{} % no page number here
 \frame{
   \titlepage
   % Include a note for the title slide here, because we cannot do so in the 
@@ -182,7 +187,6 @@ $if(title)$
   % use the titlepage-note field in the YAML header. Otherwise, we use a 
   % non-breaking space so that it is not empty.
   \note{$if(titlepage-note)$$titlepage-note$$else$~$endif$}
-}
 }
 $endif$
 
