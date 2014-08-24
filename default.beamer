@@ -56,6 +56,9 @@ $endif$
 \setbeamerfont{institute}{size=\footnotesize}
 \setbeamerfont{date}{size=\tiny}
 
+% No word figure in caption
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
 \usepackage{hyperref}
 \usepackage{pgfpages}
 \usepackage{amssymb,amsmath}
