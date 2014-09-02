@@ -132,16 +132,16 @@ $endfor$
 %customizations
 \usepackage{textcomp}
 \usepackage[osf]{mathpazo}
-\signature{}
+% \signature{Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
 \date{$date$}
-\address{4247 Cotswolds Hill Lane\\Fairfax, VA 22030}
+\address{}
 %end customizations
 
 
 
 \begin{document}
 
-\begin{letter}{}
+\begin{letter}{$address$}
 $if(salutation)$
 \opening{\noindent $salutation$}
 % \vspace{12pt}
@@ -181,7 +181,12 @@ $include-after$
 
 $endfor$
 \vspace{12pt}
-\closing{$closing$}
+\closing{$closing$\\
+  \vspace{6pt}
+  \fromsig{\includegraphics[scale=0.75]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
+  \vspace{6pt}
+  \fromname{\\Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
+}
 \end{letter}
 
 \end{document}
