@@ -2,6 +2,7 @@
 \documentclass[$if(lang)$$lang$,$endif$12pt]{letter}
 
 % Letterhead
+\usepackage[left=1in,right=1in,top=2.5in,bottom=1.5in]{geometry}
 \usepackage{wallpaper}
 \ULCornerWallPaper{1}{/Users/lmullen/.pandoc/templates/mason-letterhead.pdf}
 
