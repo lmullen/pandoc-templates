@@ -16,21 +16,38 @@ $highlighting-css$
   </style>
 $endif$
 $for(css)$
-  <link rel="stylesheet" href="$css$" />
+  <link rel="stylesheet" type="text/css" href="$css$" />
 $endfor$
 </head>
-<body>
+<body$if(coverpage)$ id="cover"$endif$>
 $if(titlepage)$
+<section epub:type="titlepage">
+$for(title)$
+$if(title.type)$
+  <h1 class="$title.type$">$title.text$</h1>
+$else$
   <h1 class="title">$title$</h1>
+$endif$
+$endfor$
 $if(subtitle)$
   <h1 class="subtitle">$subtitle$</h1>
 $endif$
 $for(author)$
   <h2 class="author">$author$</h2>
 $endfor$
-$if(date)$
-  <h3 class="date">$date$</h3>
+$for(creator)$
+  <h2 class="$creator.type$">$creator.text$</h2>
+$endfor$
+$if(publisher)$
+  <p class="publisher">$publisher$</p>
 $endif$
+$if(date)$
+  <p class="date">$date$</p>
+$endif$
+$if(rights)$
+  <div class="rights">$rights$</div>
+$endif$
+</section>
 $else$
 $body$
 $endif$
