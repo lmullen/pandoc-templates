@@ -100,13 +100,25 @@ $header-includes$
 $endfor$
 
 $if(title)$
-\title{$title$}
+\title{\normalfont $title$ }
 $endif$
 $if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author{\normalfont %
+$for(author)$%
+$if(author.name)$%
+$author.name$%
+\small%
+\vskip -2pt $author.department$ %
+\vskip -4pt $author.university$%
+\vskip -6pt {\ttfamily $author.email$ }%
+$else$%
+$author$%
+$endif$%
+$endfor$%
+}
 $endif$
 $if(date)$
-\date{$date$}
+\date{\normalfont{$date$}}
 $endif$
  
 \begin{document}
@@ -114,7 +126,7 @@ $if(title)$
 \maketitle
 $endif$
  
-\bigskip
+\bigskip \bigskip
 
 $if(abstract)$
 \begin{abstract}
