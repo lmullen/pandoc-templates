@@ -119,6 +119,8 @@ $endfor$%
 $endif$
 $if(date)$
 \date{\normalfont{$date$}}
+$else$
+\date{}
 $endif$
  
 \begin{document}
@@ -133,6 +135,13 @@ $if(abstract)$
 $abstract$
 \end{abstract}
 $endif$
+
+$if(runninghead)$
+\rhead{$runninghead$ \qquad \thepage}
+$else$
+\rhead{\thepage}
+$endif$
+
 
 $body$
  
