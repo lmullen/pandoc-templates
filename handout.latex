@@ -24,7 +24,7 @@ $endif$
 
 % ams
 \usepackage{amssymb,amsmath}
-\usepackage{mathpazo}
+\usepackage[osf]{mathpazo}
  
 % add line numbers (Caleb McDaniel)
 $if(linenos)$
@@ -100,17 +100,17 @@ $header-includes$
 $endfor$
 
 $if(title)$
-\title{\normalfont $title$ }
+\title{$title$ }
 $endif$
 $if(author)$
-\author{\normalfont %
+\author{%
 $for(author)$%
 $if(author.name)$%
 $author.name$%
 \small%
-\vskip -2pt $author.department$ %
-\vskip -4pt $author.university$%
-\vskip -6pt {\ttfamily $author.email$ }%
+\vskip -5pt $author.department$ %
+\vskip -5pt $author.university$%
+\vskip -7pt {\normalfont \ttfamily $author.email$ }%
 $else$%
 $author$%
 $endif$%
@@ -118,7 +118,7 @@ $endfor$%
 }
 $endif$
 $if(date)$
-\date{\normalfont{$date$}}
+\date{$date$}
 $else$
 \date{}
 $endif$
