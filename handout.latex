@@ -25,6 +25,9 @@ $endif$
 % ams
 \usepackage{amssymb,amsmath}
 \usepackage[osf]{mathpazo}
+
+% more floats
+\usepackage{morefloats}
  
 % add line numbers (Caleb McDaniel)
 $if(linenos)$
