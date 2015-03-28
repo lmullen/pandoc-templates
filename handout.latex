@@ -135,7 +135,7 @@ $endif$
 
 $if(abstract)$
 \begin{abstract}
-$abstract$
+\textbf{Abstract.} $abstract$
 \end{abstract}
 $endif$
 
