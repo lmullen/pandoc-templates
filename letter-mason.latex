@@ -2,7 +2,7 @@
 \documentclass[$if(lang)$$lang$,$endif$$if(size)$$size$$else$11pt$endif$]{letter}
 
 % Letterhead
-\usepackage[left=1in,right=1in,top=1.75in,bottom=1in]{geometry}
+\usepackage[left=1in,right=1in,top=2.0in,bottom=1in]{geometry}
 \usepackage{wallpaper}
 \ULCornerWallPaper{1}{/Users/lmullen/.pandoc/templates/mason-letterhead.pdf}
 
@@ -181,7 +181,7 @@ $for(include-after)$
 $include-after$
 
 $endfor$
-\vspace{12pt}
+% \vspace{12pt}
 \closing{$closing$\\
   \vspace{6pt}
   \fromsig{\includegraphics[scale=0.75]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
