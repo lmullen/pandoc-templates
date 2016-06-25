@@ -128,8 +128,7 @@ $endfor$
 \usepackage{textcomp}
 \usepackage[osf]{mathpazo}
 \signature{Lincoln A. Mullen}
-\address{Department of History MS 036\\Brandeis University\\Waltham, MA 
-02453}
+\address{}
 %end customizations
 
 \begin{document}
