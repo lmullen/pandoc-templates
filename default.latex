@@ -1,8 +1,8 @@
-\documentclass[$if(fontsize)$$fontsize$,$else$11pt,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
-\usepackage[osf]{mathpazo} % CUSTOMIZATION
+\usepackage[osf]{mathpazo}
 $endif$
 $if(linestretch)$
 \usepackage{setspace}
@@ -147,14 +147,15 @@ $else$
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
-\setlength{\parindent}{24pt} % CUSTOMIZATION
+\setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 $endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 $if(numbersections)$
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
 $else$
 \setcounter{secnumdepth}{0}
 $endif$

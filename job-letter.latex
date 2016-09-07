@@ -195,8 +195,8 @@ $include-after$
 $endfor$
 \vspace{0pt}
 \closing{Sincerely,\\
-\fromsig{\includegraphics[scale=0.25]{signature.png}} \\
-\fromname{Lincoln A. Mullen\\PhD Candidate, Brandeis University}
+\fromsig{\includegraphics[scale=0.5]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}\\
+\fromname{Lincoln A. Mullen}
 \vspace{-12pt}
 }
 \end{letter}
