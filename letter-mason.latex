@@ -2,10 +2,9 @@
 \documentclass[$if(lang)$$lang$,$endif$$if(size)$$size$$else$11pt$endif$]{letter}
 
 % Letterhead
-\usepackage[left=1in,right=1in,top=2.0in,bottom=1in]{geometry}
+\usepackage[left=1in,right=1in,top=1.9in,bottom=0.9in]{geometry}
 \usepackage{wallpaper}
 \ULCornerWallPaper{1}{/Users/lmullen/.pandoc/templates/mason-letterhead.pdf}
-
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -42,6 +41,10 @@ $endif$
 \fi
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+$if(linestretch)$
+\usepackage{setspace}
+\setlength{\parindent}{3em}
 $endif$
 $if(natbib)$
 \usepackage{natbib}
@@ -158,7 +161,15 @@ $if(toc)$
 \tableofcontents
 }
 $endif$
+
+$if(linestretch)$
+\begin{doublespace}
+\setlength{\parskip}{1pt}
+$endif$
 $body$
+$if(linestretch)$
+\end{doublespace}
+$endif$
 
 $if(natbib)$
 $if(biblio-files)$
@@ -181,13 +192,11 @@ $for(include-after)$
 $include-after$
 
 $endfor$
-% \vspace{12pt}
 \closing{$closing$\\
-  \vspace{6pt}
-  \fromsig{\includegraphics[scale=0.75]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
-  \vspace{6pt}
-  \fromname{\\Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
+  \fromsig{\includegraphics[scale=0.5]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
+  \fromname{\\Lincoln A. Mullen\\Assistant Professor}
 }
+\vspace{-20pt}
 \end{letter}
 
 \end{document}
