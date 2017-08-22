@@ -4,7 +4,8 @@
 % Letterhead
 \usepackage[left=1in,right=1in,top=1.9in,bottom=0.9in]{geometry}
 \usepackage{wallpaper}
-\ULCornerWallPaper{1}{/Users/lmullen/.pandoc/templates/mason-letterhead.pdf}
+\ULCornerWallPaper{1}{\string~/.pandoc/templates/mason-letterhead.pdf}
+
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -18,6 +19,10 @@
   \usepackage[utf8]{inputenc}
 $if(euro)$
   \usepackage{eurosym}
+$endif$
+$if(linestretch)$
+\usepackage{setspace}
+\setstretch{$linestretch$}
 $endif$
 \else % if luatex or xelatex
   \usepackage{fontspec}
@@ -201,8 +206,10 @@ $if(signature)$
 }
 $else$
 \closing{$closing$\\
-  \fromsig{\includegraphics[scale=0.5]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
-  \fromname{\\Lincoln A. Mullen\\Assistant Professor}
+  \vspace{6pt}
+  \fromsig{\includegraphics[scale=0.5]{\string~/.pandoc/templates/mullen-signature.pdf}}
+  \vspace{6pt}
+  \fromname{\\Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
 }
 $endif$
 \vspace{-20pt}
