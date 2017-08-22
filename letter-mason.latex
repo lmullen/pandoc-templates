@@ -129,6 +129,8 @@ $if(lang)$
   \usepackage[$lang$]{babel}
 \fi
 $endif$
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -192,10 +194,17 @@ $for(include-after)$
 $include-after$
 
 $endfor$
+$if(signature)$
+\closing{$closing$\\
+  \fromsig{}
+  \fromname{$signature$}
+}
+$else$
 \closing{$closing$\\
   \fromsig{\includegraphics[scale=0.5]{/Users/lmullen/.pandoc/templates/mullen-signature.pdf}}
   \fromname{\\Lincoln A. Mullen\\Assistant Professor}
 }
+$endif$
 \vspace{-20pt}
 \end{letter}
 

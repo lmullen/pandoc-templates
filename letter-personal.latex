@@ -129,14 +129,14 @@ $endfor$
 \usepackage[osf]{mathpazo}
 \signature{}
 \date{$date$}
-\address{4247 Cotswolds Hill Lane\\Fairfax, VA 22030}
+\address{14407 Hardee Chambliss Ct Apt 4\\Centreville, VA 20120}
 %end customizations
 
 
 
 \begin{document}
 
-\begin{letter}{}
+\begin{letter}{$address$}
 $if(salutation)$
 \opening{\noindent $salutation$}
 % \vspace{12pt}
