@@ -129,7 +129,7 @@ $endfor$
 \usepackage[osf]{mathpazo}
 \signature{}
 \date{$date$}
-\address{14946 Lady Madonna Ct.\\Centreville VA, 20120}
+\address{14946 Lady Madonna Ct.\\Centreville, VA 20120}
 %end customizations
 
 
