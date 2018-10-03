@@ -2,9 +2,9 @@
 \documentclass[$if(lang)$$lang$,$endif$$if(size)$$size$$else$11pt$endif$]{letter}
 
 % Letterhead
-\usepackage[left=1in,right=1in,top=1.9in,bottom=0.9in]{geometry}
+\usepackage[left=1in,right=1in,top=1in,bottom=0.9in]{geometry}
 \usepackage{wallpaper}
-\ULCornerWallPaper{1}{\string~/.pandoc/templates/mason-letterhead.pdf}
+\ThisULCornerWallPaper{1}{\string~/.pandoc/templates/mason-letterhead.pdf}
 
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
@@ -153,6 +153,7 @@ $endfor$
 \begin{document}
 
 \begin{letter}{$address$}
+\vspace*{10mm}
 $if(salutation)$
 \opening{\noindent $salutation$}
 % \vspace{12pt}
@@ -207,8 +208,8 @@ $if(signature)$
 $else$
 \closing{$closing$\\
   \vspace{6pt}
-  \fromsig{\includegraphics[scale=0.5]{\string~/.pandoc/templates/mullen-signature.pdf}}
-  \vspace{6pt}
+  \fromsig{\includegraphics[scale=0.4]{\string~/.pandoc/templates/mullen-signature.pdf}}
+  \vspace{3pt}
   $if(title-email)$
   \fromname{\\Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
   $else$
@@ -216,7 +217,7 @@ $else$
   $endif$
 }
 $endif$
-\vspace{-20pt}
+\vspace{-30pt}
 \end{letter}
 
 \end{document}
