@@ -209,7 +209,7 @@ $endfor$
 $if(title)$
   \title{$title$}
   \pretitle{\vspace{\droptitle}\Large\bf}
-  \posttitle{\par\vspace{0.15in}}
+  \posttitle{\par\vspace{0.00in}}
 $else$
   \title{}
   \pretitle{\vspace{\droptitle}}
@@ -236,7 +236,7 @@ $if(date)$
   \date{$date$}
 $else$
   \date{}
-  \predate{}\postdate{}
+  \predate{}\postdate{\vspace{-0.10in}}
 $endif$
 
 \begin{document}

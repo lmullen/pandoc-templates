@@ -209,7 +209,11 @@ $else$
   \vspace{6pt}
   \fromsig{\includegraphics[scale=0.5]{\string~/.pandoc/templates/mullen-signature.pdf}}
   \vspace{6pt}
+  $if(title-email)$
   \fromname{\\Lincoln A. Mullen\\Assistant Professor\\lmullen@gmu.edu}
+  $else$
+  \fromname{\\Lincoln A. Mullen}
+  $endif$
 }
 $endif$
 \vspace{-20pt}
